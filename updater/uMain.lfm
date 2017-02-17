@@ -1,0 +1,74 @@
+object frmMain: TfrmMain
+  Left = 501
+  Height = 101
+  Top = 247
+  Width = 334
+  BorderIcons = [biSystemMenu, biMinimize]
+  Caption = 'Free Manga Downloader - Updater'
+  ClientHeight = 101
+  ClientWidth = 334
+  FormStyle = fsSystemStayOnTop
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnShow = FormShow
+  Position = poOwnerFormCenter
+  LCLVersion = '1.7'
+  Visible = False
+  object pbDownload: TProgressBar
+    Left = 8
+    Height = 20
+    Top = 72
+    Width = 317
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    Max = 1000
+    TabOrder = 0
+  end
+  object lbTransferRateValue: TLabel
+    Left = 96
+    Height = 1
+    Top = 52
+    Width = 229
+    Anchors = [akTop, akLeft, akRight]
+    ParentColor = False
+  end
+  object lbTransferRate: TLabel
+    Left = 8
+    Height = 15
+    Top = 52
+    Width = 66
+    Caption = 'Transfer rate'
+    ParentColor = False
+  end
+  object lbFileSizeValue: TLabel
+    Left = 96
+    Height = 1
+    Top = 34
+    Width = 229
+    Anchors = [akTop, akLeft, akRight]
+    ParentColor = False
+  end
+  object lbFileSize: TLabel
+    Left = 8
+    Height = 15
+    Top = 34
+    Width = 40
+    Caption = 'File size'
+    ParentColor = False
+  end
+  object lbStatus: TLabel
+    Left = 8
+    Height = 15
+    Top = 12
+    Width = 317
+    Anchors = [akTop, akLeft, akRight]
+    Caption = 'Waiting...'
+    ParentColor = False
+  end
+  object itMonitor: TIdleTimer
+    Enabled = False
+    OnTimer = itMonitorTimer
+    left = 168
+    top = 8
+  end
+end
